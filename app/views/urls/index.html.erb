@@ -1,0 +1,52 @@
+<main  class="container-wrapper">
+  <div class="vh-100 wid-100 d-flex flex-column bg-secondary align-items-center bg-opacity-10">
+    <div class="w-100 navbar d-flex p-3 align-items-center justify-content-between bg-primary-main">
+      <p class="navbar-brand applogo fs-5 m-0 text-light">Shorty Url</p>
+      <div class="d-flex justify-content-end">
+        <%= button_to "Log out", destroy_user_session_path, method: :delete, data: { turbo: false }, class: "btn btn-light" %>
+      </div>
+    </div>
+    <h3>All Links</h3>
+    <ul class="list-group wid-90 url-list">
+      <% @urls.each do |url| %>
+        <li class="list-group-item d-flex flex-column">
+          <div class="dropdown ms-auto align-self-end">
+            <div class="mt-2" data-bs-toggle="dropdown" aria-expanded="false">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+              </svg>
+            </div>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item">
+                <%= link_to 'Edit', edit_url_path(url), class: 'text-decoration-none text-secondary' %>
+              </li>
+              <div class="dropdown-divider"></div>
+              <li class="dropdown-item text-danger">
+                <%= button_to 'Delete', url_path(url), method: :delete, data: { turbo: false }, class: "text-decoration-none text-secondary p-0 bg-transparent border-none" %>
+              </li>
+            </ul>
+          </div>
+          <div class="d-flex flex-column justify-content-between pb-3">
+            <div class="d-flex flex-column">
+              <strong>Original url:</strong>
+              <a href="<%= url.original_url %>" class="text-decoration-none text-dark break-word">
+                <%= url.original_url %>
+              </a>
+              <strong>Shorten url:</strong>
+              <a href="http://localhost:3000/<%= url.lookup_code %>" class="text-decoration-none text-dark break-word">
+                http://localhost:3000/<%= url.lookup_code %>
+              </a>
+              <p class="m-0"></p>
+            </div>
+            <div class="d-flex flex-column">
+              <p class="m-0"><strong>Clicks: </strong><%= url.clicks %></p>
+            </div>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+    <div class="wid-90 bg-second p-3 mt-auto">
+      <%= link_to "NEW LINK", new_url_path, class: "w-100 p-3 btn btn-success text-light border-light" %>
+    </div>
+  </div>
+</main>

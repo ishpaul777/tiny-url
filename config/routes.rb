@@ -6,4 +6,13 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  # root to sign in page if not signed in
+  resources :urls, only: [:index, :new, :create, :edit, :update, :destroy]
+  get "/:lookup_code", to: "urls#show"
+
+  authenticated :user do
+    root 'urls#index', as: :authenticated_root
+  end
+
+  root to: "welcome#index"
 end

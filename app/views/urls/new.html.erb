@@ -1,0 +1,26 @@
+<main  class="container-wrapper">
+  <div class="vh-100 wid-100 d-flex flex-column bg-secondary align-items-center bg-opacity-10">
+    <div class="w-100 navbar d-flex p-3 align-items-center justify-content-between bg-primary-main">
+      <p class="navbar-brand applogo fs-5 m-0 text-light">Shorty Url</p>
+      <div class="d-flex justify-content-end">
+        <%= button_to "Log out", destroy_user_session_path, method: :delete, data: { turbo: false }, class: "btn btn-light" %>
+      </div>
+    </div>
+    <%= form_with(model: @url, class: "wid-90 mt-3 d-flex flex-column" ) do |f| %>
+      <%# field for getting long url %>
+      <div class="field form-floating mt-2 mb-3">
+        <%= f.text_field :original_url, class: "form-control" %>
+        <%= f.label :original_url, "Original Url", class: "form-label" %>
+      </div>
+      <%# field for getting custom lookup code %>
+      <%= f.label :lookup_code, "http://localhost:3000/", class: "form-label" %>
+      <div class="field form-floating mb-3">
+        <%= f.text_field :lookup_code, class: "form-control" %>
+        <%= f.label :lookup_code, "Custom lookup code", class: "form-label" %>
+      </div>
+      <div class="actions">
+        <%= f.submit "Make it short", class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</main>
