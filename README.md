@@ -38,8 +38,9 @@
 ### Key Features <a name="key-features"></a>
 
 - **register and log in, so that the data is private to them.**
-- **introduce new transactions associated with a category.**
-- **see the money spent on each category.**
+- **can register anonymously and create a short url**
+- **can make a short url by giving alphanumeric characters upto 16 digits**
+- **See the most clicked links created by user**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
