@@ -14,13 +14,13 @@
       </div>
       <%# field for getting custom lookup code %>
       <%= f.label :lookup_code, "http://localhost:3000/", class: "form-label m-0 p-0" %>
-      <i class="text-muted m-0 p-0 fs-6">(Optional) Max characters 16 alphanumeric (a-z, A-Z, 0-9)</i>
+      <i class="text-muted m-0 p-0 fs-6">(Optional) Max 16 alphanumeric (a-z, A-Z, 0-9)</i>
       <div class="field form-floating mb-3">
         <%= f.text_field :lookup_code, class: "form-control" %>
         <%= f.label :lookup_code, "Custom alphanumeric", class: "form-label" %>
       </div>
       <% if alert %>
-        <p class="alert alert-danger m-0"><%= alert %></p>
+        <p class="alert alert-danger m-0"><%= alert_urls %></p>
       <% end %>
       <div class="actions">
         <%= f.submit "Make it short", class: "btn btn-primary" %>
