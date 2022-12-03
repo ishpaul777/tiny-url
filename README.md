@@ -1,26 +1,5 @@
 <a name="readme-top"></a>
 
-# 📗 Table of Contents
-
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Run tests](#run-tests)
-- [👥 Authors](#authors)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ](#faq)
-- [📝 License](#license)
-
-<!-- PROJECT DESCRIPTION -->
-
 # 📖 Budget Tracker <a name="about-project"></a>
 
 > This is a RoR mobile app created for shortening the long url links. It is a simple app that allows users to create an account and shorten their links. The app also allows users to see the number of clicks on their links.
