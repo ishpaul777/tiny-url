@@ -5,10 +5,9 @@ class Url < ApplicationRecord
 
   def generate_lookup_code
     loop do
-      # generate a random code using SecureRandom.urlsafe_base64 which returns a random string of 6 characters
-      lookup_code = SecureRandom.urlsafe_base64(6)
-      break lookup_code unless Url.exists?(lookup_code: lookup_code)
+      # Generate a random string of 6 characters (a-z, A-Z, 0-9)
+      lookup_code = SecureRandom.alphanumeric(6)
+      break lookup_code unless Url.exists?(lookup_code:)
     end
   end
-  
 end

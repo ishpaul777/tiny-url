@@ -35,7 +35,7 @@
   color: #fff;
   text-align: center;
   font-family: "Pacifico", cursive;
-  animation: wave 0.4s, jump 2s;
+  animation: wave 0.8s, jump 2s;
   position: relative;
   top: 0;
   transform: translate3d(0, 16%, 0);
@@ -44,9 +44,10 @@
   animation-fill-mode: forwards;
 }
 
-.title-char {
+.title-char{
   animation: wave 0.4s, jump 1.1s ease-in-out alternate 0.05s;
 }
+
 
 
 @keyframes wave {
@@ -136,15 +137,21 @@
 }
 
 ::-webkit-scrollbar {
-  width: 0.4rem;
+  display: none;
 }
 
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
+.border-none {
+  border: none !important;
 }
 
-::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 0.25rem;
+.text-align-left {
+  text-align: left;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.d-inline {
+  display: inline;
+}

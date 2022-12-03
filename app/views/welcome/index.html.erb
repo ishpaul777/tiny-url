@@ -15,6 +15,8 @@
     <h1 class="h-100 d-flex align-items-center justify-content-center applogo">Shorty Url</h1>
     <div class="d-flex flex-column gap-2 wid-90">
       <%= link_to 'LOG IN', '/users/sign_in', class: "btn btn-primary p-3 fw-semibold" %>
+      <%# login anonymously btn%>
+      <%= link_to 'LOG IN ANONYMOUSLY', '/sign_in_guest_user', class: "btn btn-primary p-3 fw-semibold" %>
       <%= link_to 'SIGN UP', '/users/sign_up', class: "btn btn-light p-3 fw-semibold" %>
     </div>
   </div>

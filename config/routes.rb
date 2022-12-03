@@ -7,12 +7,15 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   # root to sign in page if not signed in
-  resources :urls, only: [:index, :new, :create, :edit, :update, :destroy]
-  get "/:lookup_code", to: "urls#show"
+  resources :urls, only: %i[index new create destroy]
+  get '/sign_in_guest_user', to: 'application#sign_in_guest_user'
+  get '/:lookup_code', to: 'urls#show'
+
+  # sign in guest user
 
   authenticated :user do
     root 'urls#index', as: :authenticated_root
   end
 
-  root to: "welcome#index"
+  root to: 'welcome#index'
 end
