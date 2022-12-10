@@ -1,6 +1,6 @@
 <a name="readme-top"></a>
 
-# 📖 Tiny Url <a name="about-project"></a>
+# 🔗 Tiny Url <a name="about-project"></a>
 
 > This is a RoR mobile app created for shortening the long url links. It is a simple app that allows users to create an account and shorten their links. The app also allows users to see the number of clicks on their links.
 
